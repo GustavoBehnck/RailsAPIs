@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "6fbf66b6-19c2-4075-980e-299bf1cfb04b",
+		"name": "testeeee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38439291"
+	},
+	"item": [
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/projects",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"project\": {\n    \"name\":\"Teste DE NOVO por nome labels\",\n    \"body\":\"teste AAAAAAAAAAAAAAAAAAAAA\",\n    \"participants\":[\n        {\n            \"name\":\"Cassab\",\n            \"role\":\"estudante\"\n        },                                              \n        {   \n            \"name\":\"teste\",\n            \"role\":\"participante\"\n        }\n    ],\n    \"label_names\": [\"AAAAAAAAAAA\",\"Educação\"]\n//  \"label_ids\": [1]\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/projects/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"projects",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"project\": {\n    \"name\":\"ADICIOANNDO ACCOUNTS directlly\",\n    \"body\":\"ow\",\n    \"participants\":[\n        {\n            \"name\":\"Gustavo\",\n            \"role\":\"estudante\"\n        }                                             \n        // {   \n        //     \"name\":\"teste\",\n        //     \"role\":\"participante\"\n        // }\n    ],\n    \"account_ids\": [2,1],\n    \"label_names\": [\"Educação\",\"Tecnologia\"]\n//  \"label_ids\": [1]\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/projects",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "labels",
+			"item": [
+				{
+					"name": "labels",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Tecnologia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/labels",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"labels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "labels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/labels",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"labels"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "accounts",
+			"item": [
+				{
+					"name": "accounts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"account\": {\n    \"email\":\"email1@email.com\",\n    \"password_digest\":\"test password\",\n    \"project_ids\": [1,2]\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/accounts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/accounts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accounts",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"account\": {\n    \"password_digest\":\"aaaaaaa\",\n    \"project_ids\": [3,1]\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/accounts/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
