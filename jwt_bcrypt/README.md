@@ -1,30 +1,30 @@
-# Como configurar para testar
+# How to Set Up for Testing
 
-## Configurando o banco postgres
+## Setting Up the Postgres Database
 
 > [!IMPORTANT]
-> É necessário já ter o banco do postgres instalado em sua máquina, verifique isso antes de tentar os próximos passos.
+> You need to have Postgres installed on your machine. Make sure to verify this before proceeding with the next steps.
 > 
-> Se estiver usando um Fedora ou Rocky por exemplo, utilize o comando abaixo para a instalação do postgres em sua máquina:
+> If you are using Fedora or Rocky, for example, use the command below to install Postgres on your machine:
 > ```
 > sudo dnf in postgresql
 > ```
 
-Primeiramente, as configurações de acesso ao banco estão no arquivo `./config/database.yml`, lá há os 3 tipos de `environment` , ao rodar um projeto do rails, por padrão ele estará no environment `development`, portanto você pode configurar o acesso ao seu banco ou nele, ou no `default`.
+First, the database access settings are in the `./config/database.yml` file, which contains the 3 types of `environment`. When running a Rails project, it will default to the `development` environment, so you can configure the access to your database either there or in `default`.
 
-Para dar acesso para o projeto para o banco de dados, é necessário passar os campos `database` e `username` e se preciso `password`. Atualmente no projeto, já está configurado para buscar um banco chamado `ext_db` com um usuário `behnck`, você pode usar isso como base para seu caso.
+To provide the project with access to the `database`, you need to specify the database and `username` fields, and if necessary, the `password`.
 
-## bundle
+## Bundle
 
-Esse projeto está atualmente com o rails `7.2`, portanto, certifique-se se vc tem essa versão instalado no seu sistema.
+This project is currently using Rails `7.2`, so make sure you have this version installed on your system.
 
-Depois disso, será necessário rodar o sguinte comando para instalar as "dependencias" do rails, também conhecidas como `gems`:
+After that, you'll need to run the following command to install the Rails "dependencies," also known as `gems`:
 
 ```shell
 bundle install --local
 ```
 
-Se tudo ocorrer bem, algo como a mensagem a seguir aparecerá para você:
+If everything goes well, you should see a message like the following:
 
 ```
 Bundle complete! 10 Gemfile dependencies, 83 gems now installed.
@@ -32,17 +32,17 @@ Use `bundle info [gemname]` to see where a bundled gem is installed
 ```
 
 > [!NOTE]
-> É possível que esse processo não dê certo de primeira, se for necessário, tente repetir o comando sem o `--local`
+> It’s possible that this process may not succeed on the first try. If necessary, try running the command again without the `--local` option.
 
-## Rodar o servidor
+## Running the Server
 
-Com os passos acimas concluídos, você poderá rodar sua API usando o seguinte comando:
+Once the above steps are completed, you can run your API using the following command:
 
 ```shell
 rails server
 ```
 
-Esse comando deverá ter uma saída parecida com a seguinte:
+This command should produce output similar to the following:
 
 ```text
 => Booting Puma
@@ -58,9 +58,8 @@ Puma starting in single mode...
 * Listening on http://[::1]:3000
 ```
 
-Agora se acessar seu `http://127.0.0.1:3000`, sua aplicação já deve estar de pé
+Now, if you access `http://127.0.0.1:3000,` your application should be up and running.
 
+## Possible Requests
 
-## Requisições possível
-
-Se estiver utilizando o postman (aplicação desktop que facilita o processo de criar requisições HTTP), há uma coleção de requisições GET, POST e PATCH/PUT para esse projeto no arquivo json `ext_api.postman_collection.json` é possível importar esse arquivo no postman e ter a exata mesmas requisições.
+If you are using Postman (a desktop application that simplifies the process of creating HTTP requests), there is a collection of GET, POST, and PATCH/PUT requests for this project in the JSON file `ext_api.postman_collection.json`. You can import this file into Postman to have the exact same requests.

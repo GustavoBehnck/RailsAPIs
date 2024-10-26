@@ -1,6 +1,5 @@
-# ME LEIA
+# Description
 
-Juntei ambos os projetos de testes em um repositório apenas para diminuir a quantidade de repositórios.
+This repository has some rails projects that i created while learning Rails API
 
-Para rodar os projetos, leia o README.md de cada projeto.
-
+To run every project, read the `README.md` of each folder
